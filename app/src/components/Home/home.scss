@@ -1,0 +1,7 @@
+@import '../../sass/mixins';
+
+.home {
+  @extend %background-dark;
+  
+  padding-top: 80px;
+}

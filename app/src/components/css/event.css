@@ -1,0 +1,70 @@
+.button-reserve {
+  height: 100%;
+}
+
+.button-reserve {
+  width: 100%;
+}
+
+.event-tile {
+  width: 50%;
+  padding-top: 50%;
+}
+
+.event-action {
+  background-color: var(--color-accent);
+}
+
+.event-info {
+  background-color: white;
+}
+
+.button-reserve span {
+  color: white;
+}
+
+.event-tile {
+  float: left;
+  position: relative;
+}
+
+.event-tile-content {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.event-info .event-tile-content {
+  padding: 16px;
+}
+
+.button-reserve {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.button-reserve img {
+  width: 60px;
+  margin-right: 16px;
+}
+
+.button-reserve span {
+  font-weight: 500;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.event-shadow {
+  -webkit-box-shadow: 0 100px 200px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 100px 200px rgba(0, 0, 0, 0.5);
+}

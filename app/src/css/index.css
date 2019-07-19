@@ -1,0 +1,78 @@
+:root {
+  --color-dark: #2A2B2E;
+  --color-accent: #FF3367;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#app {
+  width: 100%;
+  height: 100%;
+}
+
+.header-3 {
+  font-size: 28px;
+}
+
+.body-text {
+  font-size: 16px;
+}
+
+.display-1 {
+  font-size: 9rem;
+}
+
+.dark-background {
+  background-color: var(--color-dark);
+}
+
+.h-100 {
+  height: 100% !important;
+}
+
+.element-fluid {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.aspect-1--1 {
+  width: 50%;
+  padding-top: 50%;
+}
+
+.p-0 {
+  padding: 0 !important;
+}
+
+.reverse-oder {
+  -webkit-box-orient: horizontal !important;
+  -webkit-box-direction: reverse !important;
+      -ms-flex-direction: row-reverse !important;
+          flex-direction: row-reverse !important;
+}
+
+.color-accent {
+  color: var(--color-accent);
+}

@@ -1,0 +1,56 @@
+@import '../../sass/mixins';
+
+.event-tile {
+  @extend %aspect-ratio-1-1;
+
+  float: left;
+  position: relative;
+}
+
+.event-tile-content {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.event-action {
+  @extend %background-accent;
+
+}
+
+.event-info {
+  @extend %background-light;
+
+  .event-tile-content {
+    padding: 16px;
+  }
+}
+
+.button-reserve {
+  @extend %w-100;
+  @extend %h-100;
+
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 60px;
+    margin-right: 16px;
+  }
+
+  span {
+    @extend %color-light;
+
+    font-weight: 500;
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+}
+
+.event-shadow {
+  box-shadow: 0 100px 200px rgba(0, 0, 0, 0.5);
+}

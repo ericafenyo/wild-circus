@@ -1,29 +1,8 @@
-import React, { useState } from 'react';
-import { Row, Col } from 'react-flexbox-grid';
-import { Card, Icon, Button, Modal } from 'antd';
-import BookingForm from './BookingForm';
-
-const { Meta } = Card;
-
-const Event = ({ event, onReserve }) => {
-  const { title, description, address, image, price, createdAt } = event;
-
-  return (
-    <Col>
-      <Card
-        style={{ width: '100%' }}
-        cover={<img alt='example' src={image} />}
-        actions={[
-          <Button onClick={onReserve} type='primary'>
-            Reserve
-          </Button>
-        ]}
-      >
-        <Meta title={title} description={description} />
-      </Card>
-    </Col>
-  );
-};
+import React, { useState } from "react";
+import { Row } from "react-flexbox-grid";
+import { Modal } from "antd";
+import BookingForm from "./BookingForm";
+import Event from "./Event/Event";
 
 const Events = ({ events }) => {
   const [formShowed, showForm] = useState(false);
@@ -33,26 +12,29 @@ const Events = ({ events }) => {
   };
 
   return (
-    <Row>
-      <div className='container'>
-        {events.map((event, index) => (
+    <div className="container">
+      <div>
+        <h2 className="display-1 color-accent">Events</h2>
+      </div>
+      {events.map((event, index) => (
+        <Row key={index} className={index % 2 != 0 && "reverse-oder"}>
           <Event
+            isReversed={index % 2 != 0}
             event={event}
-            key={index}
             onReserve={() => bookEvent(event.id)}
           />
-        ))}
+        </Row>
+      ))}
 
-        <Modal
-          title='Basic Modal'
-          visible={formShowed}
-          onOk={() => console.log('Ok')}
-          onCancel={() => showForm(false)}
-        >
-          <BookingForm />
-        </Modal>
-      </div>
-    </Row>
+      <Modal
+        title="Basic Modal"
+        visible={formShowed}
+        onOk={() => console.log("Ok")}
+        onCancel={() => showForm(false)}
+      >
+        <BookingForm />
+      </Modal>
+    </div>
   );
 };
 

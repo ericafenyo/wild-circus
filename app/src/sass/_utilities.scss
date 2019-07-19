@@ -1,0 +1,30 @@
+.dark-background {
+  background-color: var(--color-dark);
+}
+
+.h-100 {
+  height: 100% !important;
+}
+
+.element-fluid {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.aspect-1--1 {
+  width: 50%;
+  padding-top: 50%;
+}
+
+.p-0 {
+  padding: 0 !important;
+}
+
+.reverse-oder {
+  flex-direction: row-reverse !important;
+}
+
+
+.color-accent {
+  color: var(--color-accent);
+}
